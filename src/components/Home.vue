@@ -11,11 +11,13 @@
 
 <script>
 import xHeader from 'vux-components/x-header'
+import swiper from 'vux-components/swiper'
 import footBottom from './_block/footBottom'
 import search from 'vux-components/search'
 export default {
   components: {
     xHeader,
+    swiper,
     search,
     footBottom
   },

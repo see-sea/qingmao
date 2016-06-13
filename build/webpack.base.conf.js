@@ -78,6 +78,10 @@ module.exports = {
        {
         test: /\.less$/,
         loader: "style!css!less"
+      },
+      {
+        test: /vux.src.*?js$/,
+        loader: 'babel'
       }
     ]
   },

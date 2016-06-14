@@ -42,6 +42,6 @@ router.map({
   }
 })
 router.alias({
-  '/': '/login'
+  '/': '/home'
 })
 router.start(App, '#app')

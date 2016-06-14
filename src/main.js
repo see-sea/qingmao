@@ -10,15 +10,17 @@ Vue.http.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Requested-W
     /**
      * Components
      */
-import Login from './components/Login'
-import Home from './components/Home'
-import Moments from './components/Moments'
-import Discover from './components/Discover'
-import Me from './components/Me'
+import Login from './components/login'
+import Home from './components/home'
+import Moments from './components/moments'
+import Discover from './components/discover'
+import Me from './components/me'
+import Topic from './components/Topic/index'
 let App = Vue.extend({
   data () {
     return {
-      backend: 'http://nodeauth-yerko.rhcloud.com/'
+      backend: 'http://nodeauth-yerko.rhcloud.com/',
+      api: 'http://www.weiphp.com/api/'
     }
   }
 })
@@ -39,6 +41,9 @@ router.map({
   },
   '/me': {
     component: Me
+  },
+  '/topic': {
+    component: Topic
   }
 })
 router.alias({

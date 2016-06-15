@@ -15,7 +15,7 @@ import Home from './components/Home'
 import Moments from './components/Moments'
 import Discover from './components/Discover'
 import Me from './components/Me'
-import Topic from './components/Topic/Index'
+import Topic from './components/Topic/index'
 let App = Vue.extend({
   data () {
     return {

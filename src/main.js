@@ -20,32 +20,13 @@ let App = Vue.extend({
   data () {
     return {
       backend: 'http://nodeauth-yerko.rhcloud.com/',
-      api: 'http://www.qingmao.com/api/'
+      api: 'http://www.weiphp.com/api/',
+      resouce: 'http://www.weiphp.com/Public/static/'
     }
   }
 })
 let router = new VueRouter()
-    /* eslint-disable no-new */
-router.map({
-  '/login': {
-    component: Login
-  },
-  '/home': {
-    component: Home
-  },
-  '/moments': {
-    component: Moments
-  },
-  '/discover': {
-    component: Discover
-  },
-  '/me': {
-    component: Me
-  },
-  '/topic': {
-    component: Topic
-  }
-})
+router = require('route');
 router.alias({
   '/': '/home'
 })

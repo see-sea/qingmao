@@ -23,6 +23,10 @@
 import tabbar from 'vux/dist/components/tabbar'
 import tabbarItem from 'vux/dist/components/tabbar-item'
 export default {
+  ready () {
+    console.log(msg)
+  },
+  props: ['msg'],
   components: {
     tabbar,
     tabbarItem

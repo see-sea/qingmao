@@ -15,12 +15,14 @@
   "dependencies": {
     "babel-runtime": "^6.0.0",
     "cookie-cutter": "^0.1.1",
+    "npm-zepto": "^1.1.7",
     "vue": "^1.0.21",
     "vue-resource": "^0.7.2",
     "vue-router": "^0.7.13",
     "vue-strap": "^1.0.3",
     "vue-validator": "^1.4.4",
-    "vux": "^0.1.1-rc5"
+    "vux": "^0.1.1-rc5",
+    "zepto-node": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

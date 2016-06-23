@@ -24,9 +24,7 @@
 <script>
 export default {
   ready () {
-    if (typeof cookie.get('token') !== 'undefined') {
-      this.$route.router.go('/home')
-    }
+
   },
   data: {
     return: {

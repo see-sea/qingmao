@@ -1,11 +1,13 @@
 <template>
 	<div>
-  <swiper :list="list" auto></swiper>
-<div>
+    <a href="#" v-link="{path:'/moments/index'}">个人主页</a>
+    <swiper :list="list" auto></swiper>
+  </div>
 </template>
 <script>
 import swiper from 'vux-components/swiper'
 export default {
+  name: 'moments',
   components: {
     swiper
   },

@@ -1,7 +1,6 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 Vue.use(require('vue-resource'))
-Vue.use(require('vue-router'))
+
 Vue.config.debug = true
 Vue.config.devtools = true
 Vue.http.headers.common['Access-Control-Expose-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, x-session-token, *'
@@ -10,12 +9,7 @@ Vue.http.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Requested-W
     /**
      * Components
      */
-import Login from './components/Login'
-import Home from './components/Home'
-import Moments from './components/Moments'
-import Discover from './components/Discover'
-import Me from './components/Me'
-import Topic from './components/Topic/index'
+
 let App = Vue.extend({
   data () {
     return {
@@ -25,9 +19,10 @@ let App = Vue.extend({
     }
   }
 })
-let router = new VueRouter()
-router = require('route');
+
+import router from './route'
 router.alias({
   '/': '/home'
 })
+router.saveScrollPosition = true
 router.start(App, '#app')

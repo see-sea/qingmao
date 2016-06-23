@@ -1,28 +1,37 @@
+<!-- 专题首页 -->
 <template>
   <div>
+    <x-header v-on:click="switch">{{title}}<a slot="right"></a></x-header>
   <div style="margin: 10px;overflow: hidden;" v-for="item in list">
     <masker style="border-radius: 2px;" :opacity="0.5">
       <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
       <div slot="content" class="m-title">
         {{item.title}}
         <br/>
-        <span class="m-time">2016-03-18</span>
+        <span class="m-time">{{item.date}}</span>
       </div>
     </masker>
   </div>
 </div>
 </template>
+
 <script>
   import masker from 'vux-components/masker'
+  import xHeader from 'vux-components/x-header'
+  import footBottom from '../_block/footBottom'
   export default {
     components: {
-      masker
+      xHeader,
+      masker,
+      footBottom
     },
     data: function () {
       return {
+        title: '专题',
         list: [{
           title: '洗颜新潮流！人气洁面皂排行榜',
-          img: 'https://cdn.xiaotaojiang.com/uploads/82/1572ec37969ee263735262dc017975/_.jpg'
+          img: 'https://cdn.xiaotaojiang.com/uploads/82/1572ec37969ee263735262dc017975/_.jpg',
+          date: '2016-03-18'
         }, {
           title: '美容用品 & 日用品（上）',
           img: 'https://cdn.xiaotaojiang.com/uploads/59/b22e0e62363a4a652f28630b3233b9/_.jpg'
@@ -34,6 +43,7 @@
     }
 }
 </script>
+
 <style>
   .m-img {
   padding-bottom: 33%;

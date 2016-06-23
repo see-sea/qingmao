@@ -4,10 +4,12 @@
       <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_button.png">
       <span slot="label">首页</span>
     </tabbar-item>
+    <!-- // 青猫社交
     <tabbar-item v-link="{path: '/moments'}">
       <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_msg.png">
-      <span slot="label">校园圈</span>
+      <span slot="label">通讯录</span>
     </tabbar-item>
+    -->
     <tabbar-item v-link="{path: '/discover'}">
       <img slot="icon" src="https://o84lhz5xo.qnssl.com/master/src/assets/demo/icon_nav_article.png">
       <span slot="label">发现</span>
@@ -24,7 +26,6 @@ import tabbar from 'vux/dist/components/tabbar'
 import tabbarItem from 'vux/dist/components/tabbar-item'
 export default {
   ready () {
-    console.log(msg)
   },
   props: ['msg'],
   components: {
